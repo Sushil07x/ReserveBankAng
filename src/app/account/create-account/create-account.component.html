@@ -1,1 +1,39 @@
 <p>create-account works!</p>
+One way Binding & Two way Binding
+<br>
+{{accountName}}
+<br>
+<input type="text" name="accountName" [(ngModel)]="accountName" class="formControl"/>
+<button type="button" class="btn btn-success">Click</button>
+
+<div class="container mt-4 regBox">
+    <h2>Register Bank</h2>
+    <div class="row mt-4">
+        <div class="col">Bank Name</div>
+        <div class="col"><input type="text" name="bankName" [(ngModel)]="bkName" class="formControl"/></div>
+    </div>
+    <div class="row mt-4">
+        <div class="col">HeadOffice</div>
+        <div class="col"><input type="text" name="bankName" [(ngModel)]="headOffc" class="formControl"/></div>
+    </div>
+    <div class="row mt-4">
+        <div class="col">No. of Branches</div>
+        <div class="col"><input type="text" name="bankName" [(ngModel)]="noOfBranches" class="formControl"/></div>
+    </div>
+    <div class="row mt-4">
+        <div class="col">Total Balance</div>
+        <div class="col"><input type="text" name="bankName" [(ngModel)]="totalBal" class="formControl"/></div>
+    </div>
+    <div class="row mt-4">
+        <div class="col">Expected Growth Rate</div>
+        <div class="col"><input type="text" name="bankName" [(ngModel)]="exectedGrowthRate" class="formControl"/></div>
+    </div>
+    <div class="row mt-4">
+        <div class="col">No. of Customers</div>
+        <div class="col"><input type="text" name="bankName" [(ngModel)]="noOfCustomers" class="formcontrol"/></div>
+    </div>
+    <div class="row mt-4">
+        <div class="col"></div>
+        <div class="col"><button type="button" class="btn btn-primary" (click)="registerBank()">Create Account</button></div>
+    </div>
+</div>
