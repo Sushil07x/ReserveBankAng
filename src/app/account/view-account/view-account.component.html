@@ -1,0 +1,11 @@
+<p>view-account works!</p>
+
+
+{{ accountData }}
+
+<h2>Directives</h2>
+
+
+<div *ngFor="let record of accountData">
+    {{record | json}} <br><br>
+</div>

@@ -1,0 +1,24 @@
+<div class="container mt-4">
+    <div class="row mt-4">
+        <div class="col">Rule Name</div>
+        <div class="col"><input type="text" [(ngModel)]="ruleName" id="ruleName" name="ruleName" class="form-control"/></div>
+    </div>
+    <div class="row mt-4">
+        <div class="col">Rule Description</div>
+        <div class="col"><input type="text" [(ngModel)]="ruleDesc"  id="ruleDesc" name="ruleDesc" class="form-control"/></div>
+    </div>
+    <div class="row mt-4">
+        <div class="col">Rule Proposer</div>
+        <div class="col"><input type="text" [(ngModel)]="ruleProposer"  id="ruleProposer" name="ruleProposer" class="form-control"/></div>
+    </div>
+    <div class="row mt-4">
+        <div class="col">Rule Apply Region</div>
+        <div class="col"><input type="text" [(ngModel)]="ruleRegion"  id="ruleRegion" name="ruleRegion" class="form-control"/></div>
+    </div>
+    <div class="row mt-4">
+        <div class="col"></div>
+        <div class="col">
+            <button type="button" class="btn btn-success" (click)="createRule()">Submit Rule</button>
+        </div>
+    </div>
+</div>

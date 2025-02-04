@@ -1,0 +1,33 @@
+
+<div class="container mt-4">
+    <div class="row mt-4">
+        <div class="col">Rule Name</div>
+        <div class="col">Rule Desc</div>
+        <div class="col">Rule Proposer</div>
+        <div class="col">Rule Region</div>
+        <div class="col">Status</div>
+        <div class="col">Action</div>
+    </div>
+    <div class="row mt-4" *ngFor="let rule of rulesDetails">
+        
+        <div class="col">{{rule.ruleName}}</div>
+        <div class="col">{{rule.ruleDesc}}</div>
+        <div class="col">{{rule.ruleProposer}}</div>
+        <div class="col">{{rule.ruleRegion}}</div>
+        <div class="col">
+            <div *ngIf="rule.status == 'Approved'" class="bg-success">
+                         {{rule.status}}
+            </div>
+            <div *ngIf="rule.status != 'Approved' && rule.status != 'Rejected'" class="bg-secondary">
+                {{rule.status}}
+            </div>
+            <div *ngIf="rule.status == 'Rejected'" class="bg-danger">
+                {{rule.status}}
+            </div>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-success mr-4" (click)="updateRule(rule, 'approved')">Approve</button>
+            <span class="ml-4"><button type="button" class="btn btn-danger" (click)="updateRule(rule, 'rejected')">Reject</button></span>
+        </div>
+    </div>
+</div>5
