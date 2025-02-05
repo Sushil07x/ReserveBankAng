@@ -12,18 +12,22 @@ import { PayLoanComponent } from './loan/pay-loan/pay-loan.component';
 import { ViewLoanComponent } from './loan/view-loan/view-loan.component';
 import { RupeeAdminComponent } from './rupees/rupee-admin/rupee-admin.component';
 import { RupeeRequestComponent } from './rupees/rupee-request/rupee-request.component';
+import { LoginComponent } from './user/login/login.component';
+import { LogoutComponent } from './user/logout/logout.component';
 
 export const routes: Routes = [
     {path:'createAcc', component:CreateAccountComponent},
     {path:'accAdmin', component:AccountAdminComponent},
     {path:'viewAcc', component:ViewAccountComponent},
     {path:'closeAcc', component:CloseAccountComponent},
-    {path:'defnieRule', component:DefineRuleComponent},
+    {path:'defineRule', component:DefineRuleComponent},
     {path:'ruleAdmin', component:RuleAdminComponent},
     {path:'applyLoan', component:ApplyLoanComponent},
     {path:'loanAdmin', component:LoanAdminComponent},
     {path:'payLoan', component:PayLoanComponent},
     {path:'viewLoan', component:ViewLoanComponent},
     {path:'rupeeAdmin', component:RupeeAdminComponent},
-    {path:'rupeeReq', component:RupeeRequestComponent}
+    {path:'rupeeReq', component:RupeeRequestComponent},
+    {path: 'login', component:LoginComponent},
+    {path:'logout', component:LogoutComponent}
 ];

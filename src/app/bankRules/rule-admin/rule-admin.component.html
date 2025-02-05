@@ -15,7 +15,7 @@
         <div class="col">{{rule.ruleProposer}}</div>
         <div class="col">{{rule.ruleRegion}}</div>
         <div class="col">
-            <div *ngIf="rule.status == 'Approved'" class="bg-success">
+            <!-- <div *ngIf="rule.status == 'Approved'" class="bg-success">
                          {{rule.status}}
             </div>
             <div *ngIf="rule.status != 'Approved' && rule.status != 'Rejected'" class="bg-secondary">
@@ -23,6 +23,11 @@
             </div>
             <div *ngIf="rule.status == 'Rejected'" class="bg-danger">
                 {{rule.status}}
+            </div> -->
+            <div [ngSwitch]="rule.status">
+                <div *ngSwitchCase="ruleStatuses[0]" class="bg-success">{{rule.status}}</div>
+                <div *ngSwitchCase="ruleStatuses[1]" class="bg-danger">{{rule.status}}</div>
+                <div *ngSwitchDefault="ruleStatuses[2]" class="bg-secondary">{{rule.status}}</div>
             </div>
         </div>
         <div class="col">

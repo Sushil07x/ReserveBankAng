@@ -14,6 +14,7 @@ export class RuleAdminComponent implements OnInit {
 
   apiUrl = "https://retoolapi.dev/qRO2OP/rbiRules";
   rulesDetails :any;
+  ruleStatuses = ['Approved', 'Rejected', 'Initiated'];
   constructor(private apiService: ApiService){}
 
   ngOnInit(): void {

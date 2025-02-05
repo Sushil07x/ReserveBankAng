@@ -1,0 +1,26 @@
+
+<div class="container mt-4">
+    <form [formGroup]="loginForm">
+        <div class="row mt-4">
+            <h2>Login</h2>
+        </div>
+        <div class="row mt-4">
+            <div class="col">Username</div>
+            <div class="col">
+                <input type="text" id="userName" name="userName" class="form-control" formControlName="userName"/>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">Password</div>
+            <div class="col"><input type="text" id="pswd" name="pswd" class="form-control" formControlName="pswd"/></div>
+        </div>
+        <div class="row mt-4">
+            <div class="col"></div>
+            <div class="col"><button type="button" class="btn btn-primary" (click)="checkLogin()">Login</button></div>
+        </div>
+    </form>
+</div>
+
+Oneway Binding - TS -> HTML
+Twoway binding - ngModel - HTML <-> TS
+FormControl - HTML -> TS
