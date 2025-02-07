@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { CommonModule } from '@angular/common';
+import { SessionService } from '../../services/session.service';
 
 @Component({
   selector: 'app-view-account',
@@ -11,9 +12,10 @@ import { CommonModule } from '@angular/common';
 })
 export class ViewAccountComponent implements OnInit{
 
-  constructor(private apiService:ApiService){}
+  constructor(private apiService:ApiService, private sessionService: SessionService){}
 
   ngOnInit(): void {
+    this.sessionService.validateUserSession();
     this.getAccountData();
   }
 

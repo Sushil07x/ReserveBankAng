@@ -11,13 +11,13 @@
         <div class="col">Expected Growth</div>
         <div class="col">No. of Customers</div>
         <div class="col">Email</div>
-        <div class="col" *ngIf="showSensitiveData">Mobile</div>
+        <div class="col" *ngIf="showSensitiveData">Mobile</div> 
         <div class="col">Action</div>        
     </div>
     <div class="row" *ngFor="let account of accounts">
         <div class="col">{{account.bankName}}</div>
         <div class="col">{{account.headOffc}}</div>
-        <div class="col">{{account.noOfBranches}}</div>
+        <div class="col">{{account.noOfBranches}}</div> 
         <div class="col" *ngIf="showSensitiveData">{{account.totalBal}}</div>
         <div class="col">{{account.expectedGrowth}}</div>
         <div class="col">{{account.noOfCustomers}}</div>

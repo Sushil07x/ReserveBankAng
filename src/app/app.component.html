@@ -4,5 +4,11 @@
 </div>
 <a [routerLink]="['createAcc']" class="btn btn-primary">Create Account</a>
 <a [routerLink]="['viewAcc']" class="btn btn-primary">View Account</a>
+<span *ngIf="!isSessionAvailable">
+  <a [routerLink]="['login']" class="btn btn-primary">Login</a>
+</span>
+<span *ngIf="isSessionAvailable">
+  <a [routerLink]="['logout']" class="btn btn-primary">Logout</a>
+</span>
 <button type="button" class="btn btn-secondary" (click)="gotoRupeeAdmin()">Rupee Admin</button>
 <router-outlet></router-outlet>

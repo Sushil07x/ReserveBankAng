@@ -14,6 +14,7 @@ import { RupeeAdminComponent } from './rupees/rupee-admin/rupee-admin.component'
 import { RupeeRequestComponent } from './rupees/rupee-request/rupee-request.component';
 import { LoginComponent } from './user/login/login.component';
 import { LogoutComponent } from './user/logout/logout.component';
+import { RegisterComponent } from './user/register/register.component';
 
 export const routes: Routes = [
     {path:'createAcc', component:CreateAccountComponent},
@@ -29,5 +30,6 @@ export const routes: Routes = [
     {path:'rupeeAdmin', component:RupeeAdminComponent},
     {path:'rupeeReq', component:RupeeRequestComponent},
     {path: 'login', component:LoginComponent},
-    {path:'logout', component:LogoutComponent}
+    {path:'logout', component:LogoutComponent},
+    {path:'register', component:RegisterComponent}
 ];

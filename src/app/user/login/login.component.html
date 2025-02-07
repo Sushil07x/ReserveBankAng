@@ -4,6 +4,11 @@
         <div class="row mt-4">
             <h2>Login</h2>
         </div>
+        <div class="row mt-4" *ngIf="errMsg">
+            <ngb-alert [dismissible]="true" >
+                <strong>Error!</strong> {{ errMsg }}.
+            </ngb-alert>
+        </div>
         <div class="row mt-4">
             <div class="col">Username</div>
             <div class="col">

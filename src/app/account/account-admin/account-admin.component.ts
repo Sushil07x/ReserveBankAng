@@ -25,7 +25,7 @@ export class AccountAdminComponent implements OnInit {
       (responseData:any) => {
         this.accounts = responseData;
       },
-      err => { console.log(err);}
+      err => {console.log(err);}
     );
   }
 }
