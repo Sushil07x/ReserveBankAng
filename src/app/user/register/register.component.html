@@ -1,51 +1,49 @@
-
 <div class="container mt-4">
     <h2>Register User</h2>
     <form [formGroup]="registerForm">
         <div class="row mt-4" *ngIf="isRegisterSuccess">
             <ngb-alert [dismissible]="false" type="success">
                 <strong>Success!</strong> User Registered Successfully.
-            </ngb-alert>
-            
+            </ngb-alert>            
         </div>
-    <div class="row mt-4">
-        <div class="col"> User Name</div>
-        <div class="col"> 
-            <input type="text" id="userName" name="userName" class="form-control" formControlName="userName"/>
-            <div *ngIf="registerForm.get('userName')?.hasError('required') && isFromSubmitted" class="text-danger"> Username is Mandatory </div>
+        <div class="row mt-4">
+            <div class="col"> User Name</div>
+            <div class="col"> 
+                <input type="text" id="userName" name="userName" class="form-control" formControlName="userName"/>
+                <div *ngIf="registerForm.get('userName')?.hasError('required') && isFromSubmitted" class="text-danger"> Username is Mandatory </div>
+            </div>
         </div>
-    </div>
-    <div class="row mt-4">
-        <div class="col"> Password</div>
-        <div class="col"> 
-            <input type="password" id="pswd" name="pswd" class="form-control" formControlName="pswd"/>
-            <div *ngIf="registerForm.get('pswd')?.hasError('required') && isFromSubmitted" class="text-danger"> Password should have a minimum lenght of 8 characters</div>
+        <div class="row mt-4">
+            <div class="col"> Password</div>
+            <div class="col"> 
+                <input type="password" id="pswd" name="pswd" class="form-control" formControlName="pswd"/>
+                <div *ngIf="registerForm.get('pswd')?.hasError('required') && isFromSubmitted" class="text-danger"> Password should have a minimum lenght of 8 characters</div>
+            </div>
         </div>
-    </div>
-    <div class="row mt-4">
-        <div class="col"> Confirm Password</div>
-        <div class="col"> 
-            <input type="password" id="cfpswd" name="cfpswd" class="form-control" formControlName="cfPswd"/>
+        <div class="row mt-4">
+            <div class="col"> Confirm Password</div>
+            <div class="col"> 
+                <input type="password" id="cfpswd" name="cfpswd" class="form-control" formControlName="cfPswd"/>
+            </div>
         </div>
-    </div>
-    <div class="row mt-4">
-        <div class="col"> Mobile </div>
-        <div class="col"> 
-            <input type="text" id="mobile" name="mobile" class="form-control" formControlName="mobile"/>
+        <div class="row mt-4">
+            <div class="col"> Mobile </div>
+            <div class="col"> 
+                <input type="text" id="mobile" name="mobile" class="form-control" formControlName="mobile"/>
+            </div>
         </div>
-    </div>
-    <div class="row mt-4">
-        <div class="col"> Email</div>
-        <div class="col">
-            <input type="email" id="email" name="email" class="form-control" formControlName="email"/>
+        <div class="row mt-4">
+            <div class="col"> Email</div>
+            <div class="col">
+                <input type="email" id="email" name="email" class="form-control" formControlName="email"/>
+            </div>
         </div>
-    </div>
-    <div class="row mt-4">
-        <div class="col"> </div>
-        <div class="col"> 
-            <button type="submit" class="btn btn-primary" (click)="registerUser()">Register</button>
-            <span class="ml-4"><button type="reset" class="btn btn-secondary">Cancel</button></span>
+        <div class="row mt-4">
+            <div class="col"> </div>
+            <div class="col"> 
+                <button type="submit" class="btn btn-primary" (click)="registerUser()">Register</button>
+                <span class="ml-4"><button type="reset" class="btn btn-secondary">Cancel</button></span>
+            </div>
         </div>
-    </div>
     </form>
 </div>

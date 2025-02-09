@@ -33,7 +33,7 @@ export class RegisterComponent {
 
   registerUser(){
     this.isFromSubmitted = true;
-    console.log(this.registerForm.get('userName')?.hasError('required'));
+
     if(this.validateRegForm() && this.registerForm.status == 'VALID'){
 
       console.log("Condition statisfied")

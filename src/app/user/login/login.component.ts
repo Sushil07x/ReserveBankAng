@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormControlName, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { apiUrls } from '../../constants/globalConstants';
 import { ApiService } from '../../services/api.service';
 import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
@@ -18,10 +18,7 @@ export class LoginComponent {
 
   loginForm : FormGroup;
   errMsg : string = '';
-  constructor(private apiService: ApiService, private router:Router,
-    private sessionService: SessionService
-  ){
-
+  constructor(private apiService: ApiService, private router:Router, private sessionService: SessionService){
     this.loginForm = new FormGroup(
       {userName : new FormControl('', [Validators.maxLength(10), Validators.required]),
         pswd : new FormControl('', Validators.required)
@@ -31,8 +28,8 @@ export class LoginComponent {
 
   checkLogin(){
     this.errMsg = '';
-    console.log(this.loginForm);
-    
+
+    console.log(this.loginForm);  
     console.log(this.loginForm.get('userName')?.value);
     console.log(this.loginForm.get('pswd')?.value);
     console.log(this.loginForm.status);
@@ -54,10 +51,7 @@ export class LoginComponent {
         },
         err => { console.log(err); }
       );
-    }
-
-    
+    }   
   }
-
 }
   
