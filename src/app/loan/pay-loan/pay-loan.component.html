@@ -1,1 +1,12 @@
 <p>pay-loan works!</p>
+
+<ng-container class="container mt-4">
+    <h2>Pay Loan</h2>
+    <input type="text" class="form-control" [(ngModel)]="loanAmt"/>
+
+    <br>
+    {{ foreAmount }}
+</ng-container>
+
+<hr>
+<app-foreclosure [loanAmt]="loanAmt" (send)="getData($event)" ></app-foreclosure>

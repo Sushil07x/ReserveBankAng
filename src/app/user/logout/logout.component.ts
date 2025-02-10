@@ -7,7 +7,7 @@ import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
   standalone: true,
   imports: [NgbAlertModule],
   templateUrl: './logout.component.html',
-  styleUrl: './logout.component.sc
+  styleUrl: './logout.component.scss'
 })
 export class LogoutComponent implements OnInit {
 
